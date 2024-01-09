@@ -54,4 +54,20 @@ F1 Score on validation:
 
 Метрики по классам: 
 
+| Attempt | recall | precision | f1_score |
+| :---:   | :---:  | :---:     | :---:    |
+| Airplane| 0.82   | 0.88      |  0.83    |
+| Automobile | 0.90   | 0.93      |  0.91    |
+| Bird    | 0.79   | 0.76      |  0.77    |
+| Cat     | 0.72   | 0.68      |  0.68    |
+| Deer    | 0.86   | 0.76      |  0.79    |
+| Dog     | 0.71   | 0.84      |  0.75    |
+| Frog    | 0.81   | 0.90      |  0.84    |
+| Horse   | 0.92   | 0.79      |  0.84    |
+| Ship    | 0.94   | 0.85      |  0.89    |
+| Truck   | 0.83   | 0.95      |  0.87    |
+
+Example:
+
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/2e02d34d-7eff-465f-9ae8-617012a5992a)
 
