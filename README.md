@@ -23,51 +23,62 @@
 
 Архитектура: Resnet
 
-Гиперпараметры:
+На всем датасете был предобучен backbone сети resnet18 на задаче восстановления изображения (Encoder - Decoder)
 
-1. Optimizer SGD
-2. Learning rate 0.01
-3. Momentum 0.9
-4. Weight_decay 0.0001
-5. Batchsize 64
-6. Image size 32x32
+В целом, на небольшой части датасета предобучение позволило получить лучшие метрики. При обучении на всем датасете CIFAR10 предобучение на задаче восстановление изображения скорее вредило.
 
-Train loss:
+Эксперимент 1 (100% датасета)
 
-![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/befb41e1-c6a0-4bb9-8865-3360be606a4f)
+Лоссы
 
-Validation loss:
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/18430748-40fe-49f4-ba02-c7e2550afd95)
 
-![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/18729c6b-9c73-400c-a328-5653e1bb8556)
+Реколл
 
-Recall on validation:
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/2aa89eaf-7842-46d2-ba4a-adefaf99aa4f)
 
-![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/e39c071a-3f3a-4b92-bf34-af343af55db8)
+Пресижн
 
-Precision on validation:
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/f93e9914-ddcd-46e8-909d-5eed84c3caa9)
 
-![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/9c284f5b-138e-42a2-8a99-333ce22fe5d1)
+F1 мера
 
-F1 Score on validation:
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/a021b2c9-590a-4b2f-8654-0baf5c104935)
 
-![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/c3e53f0c-1b53-455a-8f15-4a33c9b4e9c6)
+Эксперимент 2 (50% датасета)
 
-Метрики по классам: 
+Лоссы
 
-| Attempt | recall | precision | f1_score |
-| :---:   | :---:  | :---:     | :---:    |
-| Airplane| 0.82   | 0.88      |  0.83    |
-| Automobile | 0.90   | 0.93      |  0.91    |
-| Bird    | 0.79   | 0.76      |  0.77    |
-| Cat     | 0.72   | 0.68      |  0.68    |
-| Deer    | 0.86   | 0.76      |  0.79    |
-| Dog     | 0.71   | 0.84      |  0.75    |
-| Frog    | 0.81   | 0.90      |  0.84    |
-| Horse   | 0.92   | 0.79      |  0.84    |
-| Ship    | 0.94   | 0.85      |  0.89    |
-| Truck   | 0.83   | 0.95      |  0.87    |
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/7065fa8b-0d13-47e0-904f-57cceb2b2c57)
 
-Example:
+Реколл
 
-![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/2e02d34d-7eff-465f-9ae8-617012a5992a)
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/c3c85c70-69d3-48fe-b2f2-24dcc3bc10da)
+
+Пресижн
+
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/d663c3a5-69d7-411f-99de-b8c4ab94b8bd)
+
+F1 мера
+
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/d21fe60e-0c7c-4c03-9af9-5938d781e47d)
+
+Эксперимент 3 (10% датасета)
+
+Лоссы
+
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/3413da25-ba57-4130-b438-dd6b6ebcdd5c)
+
+Реколл
+
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/26f12592-aefb-471d-8002-e55413f00431)
+
+Пресижн
+
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/47b10222-8e45-4184-9f1a-24ad825fc212)
+
+F1 мера
+
+![image](https://github.com/Egorbl/images_processing_homeworks/assets/83879805/3eb1c4c2-124d-42d6-9f65-da1532126189)
+
 
